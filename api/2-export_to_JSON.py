@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Export employee TODO list data to JSON."""
 
