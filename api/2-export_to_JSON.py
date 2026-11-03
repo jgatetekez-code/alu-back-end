@@ -9,9 +9,8 @@ import sys
 if __name__ == "__main__":
     employee_id = int(sys.argv[1])
 
-    user_url = (
-        "https://jsonplaceholder.typicode.com/users/{}"
-        .format(employee_id)
+    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(
+        employee_id
     )
     user_response = requests.get(user_url)
     user = user_response.json()
@@ -34,4 +33,5 @@ if __name__ == "__main__":
     filename = "{}.json".format(employee_id)
     with open(filename, mode="w") as jsonfile:
         json.dump({str(employee_id): tasks}, jsonfile)
+
 
